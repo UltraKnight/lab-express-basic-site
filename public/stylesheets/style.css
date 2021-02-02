@@ -52,7 +52,7 @@ main {
     background-repeat: no-repeat;
     background-position-x: center;
     width: 90vw;
-    height: 100vh;
+    height: fit-content;
     margin: 0 auto;
     text-align: center;
     background-color: rgba(186, 112, 47, 0.6);
@@ -69,7 +69,22 @@ main p {
     text-align: justify;
 }
 
+main p.text-center {
+    text-align: center;
+}
+
 main img {
     width: 500px;
     margin: 10px;  
+}
+
+main img.img-big {
+    width: 800px;
+}
+
+@media only screen and (max-width: 800px) {
+    main img, main img.img-big {
+        height: auto;
+        width: 80vw;
+    }
 }
